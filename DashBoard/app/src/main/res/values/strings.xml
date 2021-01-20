@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DashBoard</string>
+    <string name="facebook_app_id">659382484942753</string>
+    <string name="fb_login_protocol_scheme">fb659382484942753</string>
+    <string name="dummy">The best coffee, cream with vanilla and chocolate to let think it is a delicious and our favorite dessert the Tiramissu</string>
+    <string name="google_map_key">AIzaSyDxJngsgdUaxhGS-SBnHLf4KHZhmdxMwNs</string>
+</resources>

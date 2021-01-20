@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/main_toolbar"/>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_ui"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:background="@drawable/bg_purpule"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginRight="20dp" >
+
+                        <TextView
+                            android:id="@+id/txtdashboard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:text="Dashboard"
+                            android:textColor="#FFF"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:id="@+id/settingWidget"
+                            android:layout_width="82dp"
+                            android:layout_height="82dp"
+                            android:layout_marginBottom="10dp"
+                            android:src="@drawable/ic_add"
+                            android:background="@drawable/circle"
+                            android:layout_alignParentRight="true"/>
+                    </RelativeLayout>
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:rowCount="3"
+                        android:columnCount="2"
+                        android:columnOrderPreserved="false"
+                        android:alignmentMode="alignMargins"
+                        >
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/imgurCase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight = "1"
+                        android:layout_rowWeight = "1"
+                        app:cardElevation="6dp"
+                        app:cardCornerRadius="12dp"
+                        android:visibility="gone"
+                        android:layout_margin="12dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:gravity="center">
+
+                        <ImageView
+                            android:src="@drawable/ic_imgur"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:textColor="#000"
+                            android:text="Imgur"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/facebookCase"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight = "1"
+                            android:layout_rowWeight = "1"
+                            app:cardElevation="6dp"
+                            app:cardCornerRadius="12dp"
+                            android:layout_margin="12dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:src="@drawable/ic_bigger_facebook"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:textColor="#000"
+                                    android:text="Facebook"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/weatherCase"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight = "1"
+                            android:layout_rowWeight = "1"
+                            app:cardElevation="6dp"
+                            app:cardCornerRadius="12dp"
+                            android:layout_margin="12dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:src="@drawable/ic_bigger_weather"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:textColor="#000"
+                                    android:text="Weather"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/newsCase"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight = "1"
+                            android:layout_rowWeight = "1"
+                            app:cardElevation="6dp"
+                            app:cardCornerRadius="12dp"
+                            android:layout_margin="12dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:src="@drawable/ic_bigger_news"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:textColor="#000"
+                                    android:text="News"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/covidCase"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight = "1"
+                            android:layout_rowWeight = "1"
+                            app:cardElevation="6dp"
+                            app:cardCornerRadius="12dp"
+                            android:layout_margin="12dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:src="@drawable/ic_bigger_covid"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:textColor="#000"
+                                    android:text="Covid"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/paypalCase"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight = "1"
+                            android:layout_rowWeight = "1"
+                            app:cardElevation="6dp"
+                            app:cardCornerRadius="12dp"
+                            android:layout_margin="12dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:src="@drawable/ic_paypal_biger"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:textColor="#000"
+                                    android:text="Coffee Home"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/theaterCase"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight = "1"
+                            android:layout_rowWeight = "1"
+                            app:cardElevation="6dp"
+                            app:cardCornerRadius="12dp"
+                            android:layout_margin="12dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:src="@drawable/ic_bigger_theater"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:textColor="#000"
+                                    android:text="Theater"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </GridLayout>
+                </LinearLayout>
+            </ScrollView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/main_nav_drawer"
+        android:background="@android:color/white">
+
+        <include
+            layout="@layout/main_nav_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

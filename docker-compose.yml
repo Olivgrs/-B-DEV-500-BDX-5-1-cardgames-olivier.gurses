@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  area-api:
+    build:
+      context: ./api/Dashboard
+    container_name: "area-api"
+    ports:
+      - "8081:80"
+    restart: always
